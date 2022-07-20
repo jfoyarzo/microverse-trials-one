@@ -13,15 +13,22 @@
     <p id="description">A simple survey form</p>
 
     <form action="" id="survey-form">
-      <label for="name">Enter your name</label>
-      <input required type="text" name="name" id="name">
+      <label for="name" id="name-label">Enter your name</label>
+      <input required type="text" name="name" id="name" placeholder="Full name">
 
-      <label for="email">Enter your E-mail</label>
-      <input required type="email" name="email" id="email">
+      <label for="email" id="email-label">Enter your E-mail</label>
+      <input required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" type="email" name="email" id="email" placeholder="adress@something.com">
 
-      <label for="number">Enter a number</label>
-      <input type="number" name="number" id="number" required>
-      
+      <label for="number" id="number-label">Enter a number</label>
+      <input type="text" name="number" id="number" min="1" max="10"  required pattern="\d" placeholder="1-10">
+
+      <label for="dropdown">Select your gender</label>
+      <select name="gender" id="dropdown">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>        
+      </select>
+      <button type="submit">submit</button>
     </form>
     <!--
 
